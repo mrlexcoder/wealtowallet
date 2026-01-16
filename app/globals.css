@@ -28,8 +28,44 @@ body {
 /* Custom button styles - no border radius */
 button {
   border-radius: 0 !important;
+  transition: none !important;
 }
 
 .btn {
   border-radius: 0 !important;
+  transition: none !important;
+}
+
+/* Multicolor border animation */
+@keyframes borderAnimation {
+  0% {
+    border-color: #3b82f6;
+  }
+  16.66% {
+    border-color: #8b5cf6;
+  }
+  33.33% {
+    border-color: #ec4899;
+  }
+  50% {
+    border-color: #f97316;
+  }
+  66.66% {
+    border-color: #fbbf24;
+  }
+  83.33% {
+    border-color: #10b981;
+  }
+  100% {
+    border-color: #3b82f6;
+  }
+}
+
+.btn-animated-border {
+  border: 1px solid transparent;
+  transition: none;
+}
+
+.btn-animated-border:hover {
+  animation: borderAnimation 1.5s linear infinite;
 }

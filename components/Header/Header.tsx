@@ -58,11 +58,11 @@ export default function Header() {
             </svg>
           </button>
 
-          <button className="hidden md:block px-4 py-2 text-sm font-semibold text-gray-700 hover:text-white hover:bg-gray-900 uppercase tracking-wide">
+          <button className="hidden md:block px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-300 uppercase tracking-wide btn-animated-border">
             Sign In
           </button>
 
-          <button className="px-6 py-2.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-800 hover:text-yellow-300 uppercase tracking-wide">
+          <button className="px-6 py-2.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-800 uppercase tracking-wide btn-animated-border">
             Sign Up
           </button>
 
