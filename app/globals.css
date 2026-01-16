@@ -36,36 +36,60 @@ button {
   transition: none !important;
 }
 
-/* Multicolor border animation */
-@keyframes borderAnimation {
+/* Gray border running animation */
+@keyframes borderRun {
   0% {
-    border-color: #3b82f6;
+    box-shadow: 
+      2px 0 0 0 #6b7280,
+      0 0 0 0 transparent,
+      0 0 0 0 transparent,
+      0 0 0 0 transparent;
   }
-  16.66% {
-    border-color: #8b5cf6;
-  }
-  33.33% {
-    border-color: #ec4899;
+  25% {
+    box-shadow: 
+      2px 0 0 0 #6b7280,
+      0 2px 0 0 #6b7280,
+      0 0 0 0 transparent,
+      0 0 0 0 transparent;
   }
   50% {
-    border-color: #f97316;
+    box-shadow: 
+      2px 0 0 0 #6b7280,
+      0 2px 0 0 #6b7280,
+      -2px 0 0 0 #6b7280,
+      0 0 0 0 transparent;
   }
-  66.66% {
-    border-color: #fbbf24;
-  }
-  83.33% {
-    border-color: #10b981;
+  75% {
+    box-shadow: 
+      2px 0 0 0 #6b7280,
+      0 2px 0 0 #6b7280,
+      -2px 0 0 0 #6b7280,
+      0 -2px 0 0 #6b7280;
   }
   100% {
-    border-color: #3b82f6;
+    box-shadow: 
+      2px 0 0 0 #6b7280,
+      0 2px 0 0 #6b7280,
+      -2px 0 0 0 #6b7280,
+      0 -2px 0 0 #6b7280;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: #9ca3af;
+  }
+  50% {
+    border-color: #4b5563;
   }
 }
 
 .btn-animated-border {
   border: 1px solid transparent;
-  transition: none;
+  position: relative;
 }
 
 .btn-animated-border:hover {
-  animation: borderAnimation 1.5s linear infinite;
+  border-color: #6b7280;
+  animation: borderGlow 1s ease-in-out infinite;
 }
