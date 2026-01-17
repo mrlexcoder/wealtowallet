@@ -22,17 +22,17 @@ export default function Header() {
   return (
     <>
       <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+        <div className="px-4 flex items-center justify-center h-16 relative">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 text-emerald-600 hover:opacity-80 transition-opacity duration-200">
+          <Link href="/" className="absolute left-4 flex items-center gap-2 text-emerald-600 hover:opacity-80 transition-opacity duration-200">
             <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z"/>
             </svg>
             <span className="text-xl font-bold">wealtowallet</span>
           </Link>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center flex-1 ml-12">
+          {/* Navigation - Centered */}
+          <nav className="hidden md:flex items-center">
             <ul className="flex items-center gap-6">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -49,9 +49,9 @@ export default function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-4">
+          <div className="absolute right-4 flex items-center gap-4">
             <button 
-              className={`p-2 text-gray-700 hover:bg-[#e3faf2] hover:text-emerald-600 transition-colors duration-200 ${isSearchOpen ? 'bg-[#e3faf2]' : ''}`}
+              className={`w-9 h-9 rounded-full flex items-center justify-center text-gray-700 hover:bg-[#e3faf2] hover:text-emerald-600 transition-colors duration-200 ${isSearchOpen ? 'bg-[#e3faf2]' : ''}`}
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               aria-label="Search"
             >
@@ -85,36 +85,36 @@ export default function Header() {
 
         {/* Search Bar */}
         {isSearchOpen && (
-          <div className="bg-[#e3faf2] border-t border-gray-200">
-            <div className="max-w-7xl mx-auto px-4 py-6">
-              <div className="flex items-center gap-4 max-w-4xl mx-auto">
-                <div className="flex-1 flex items-center bg-white border border-gray-300 px-4 py-3">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-400">
+          <div className="bg-white border-t border-gray-200 relative">
+            <div className="px-4 py-8">
+              <div className="flex items-center gap-3 max-w-5xl mx-auto">
+                <div className="flex-1 flex items-center bg-white border border-gray-300 px-4 py-3.5 focus-within:border-emerald-600 focus-within:ring-2 focus-within:ring-emerald-100 transition-all">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-400 flex-shrink-0">
                     <circle cx="11" cy="11" r="8"/>
                     <path d="m21 21-4.35-4.35"/>
                   </svg>
                   <input 
                     type="text" 
                     placeholder='Try "Best savings account?"'
-                    className="flex-1 ml-3 outline-none text-gray-700 placeholder-gray-400"
+                    className="flex-1 ml-3 outline-none text-gray-700 placeholder-gray-400 text-sm"
                     autoFocus
                   />
                 </div>
-                <button className="px-8 py-3 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-800 uppercase tracking-wide">
+                <button className="px-6 py-3.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-800 uppercase tracking-wide">
                   Search
-                </button>
-                <button 
-                  onClick={() => setIsSearchOpen(false)}
-                  className="p-2 text-gray-600 hover:text-gray-900"
-                  aria-label="Close search"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                  </svg>
                 </button>
               </div>
             </div>
+            <button 
+              onClick={() => setIsSearchOpen(false)}
+              className="absolute top-6 right-4 w-8 h-8 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100"
+              aria-label="Close search"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
           </div>
         )}
       </header>
