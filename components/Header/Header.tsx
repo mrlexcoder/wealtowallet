@@ -51,7 +51,7 @@ export default function Header() {
           {/* Actions */}
           <div className="absolute right-4 flex items-center gap-4">
             <button 
-              className={`w-9 h-9 rounded-full flex items-center justify-center text-gray-700 hover:bg-[#e3faf2] hover:text-emerald-600 transition-colors duration-200 ${isSearchOpen ? 'bg-[#e3faf2]' : ''}`}
+              className={`w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:text-emerald-600 transition-colors duration-200 ${isSearchOpen ? 'bg-[#e3faf2]' : 'hover:bg-[#e3faf2]'}`}
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               aria-label="Search"
             >
