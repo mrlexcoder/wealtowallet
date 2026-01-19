@@ -29,24 +29,34 @@ body {
 button {
   border-radius: 0 !important;
   transition: none !important;
+  cursor: pointer !important;
 }
 
 .btn {
   border-radius: 0 !important;
   transition: none !important;
+  cursor: pointer !important;
 }
 
 /* Search button circle override */
 button.w-10.h-10.rounded-full.flex.items-center.justify-center {
   border-radius: 50% !important;
+  cursor: pointer !important;
 }
 
 button.w-10.h-10.rounded-full.flex.items-center.justify-center:hover {
   border-radius: 50% !important;
+  cursor: pointer !important;
 }
 
 button.w-10.h-10.rounded-full.flex.items-center.justify-center:active {
   border-radius: 50% !important;
+  cursor: pointer !important;
+}
+
+/* Cursor pointer for all clickable elements */
+a, button, [role="button"], .cursor-pointer {
+  cursor: pointer !important;
 }
 
 /* Gray border running animation */
