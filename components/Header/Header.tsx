@@ -22,17 +22,17 @@ export default function Header() {
   return (
     <>
       <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-        <div className="px-4 flex items-center justify-center h-16 relative">
+        <div className="px-4 flex items-center justify-between md:justify-center h-16 relative">
           {/* Logo */}
-          <Link href="/" className="absolute left-4 flex items-center gap-2 text-emerald-600 hover:opacity-80 transition-opacity duration-200">
+          <Link href="/" className="md:absolute md:left-4 flex items-center gap-2 text-emerald-600 hover:opacity-80 transition-opacity duration-200">
             <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z"/>
             </svg>
             <span className="text-xl font-bold">wealtowallet</span>
           </Link>
 
-          {/* Navigation - Centered */}
-          <nav className="hidden md:flex items-center">
+          {/* Navigation - Desktop Only */}
+          <nav className="hidden lg:flex items-center">
             <ul className="flex items-center gap-6">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -49,7 +49,7 @@ export default function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="absolute right-4 flex items-center gap-4">
+          <div className="md:absolute md:right-4 flex items-center gap-2 md:gap-4">
             <button 
               className={`w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:text-emerald-600 transition-colors duration-200 ${isSearchOpen ? 'bg-[#e3faf2]' : 'hover:bg-[#e3faf2]'}`}
               onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -61,27 +61,64 @@ export default function Header() {
               </svg>
             </button>
 
-            <button className="hidden md:block px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-300 uppercase tracking-wide btn-animated-border">
+            <button className="hidden lg:block px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-300 uppercase tracking-wide btn-animated-border">
               Sign In
             </button>
 
-            <button className="px-6 py-2.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-800 uppercase tracking-wide btn-animated-border">
+            <button className="hidden md:block px-6 py-2.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-800 uppercase tracking-wide btn-animated-border">
               Sign Up
             </button>
 
             <button 
-              className="md:hidden p-2 text-gray-700 hover:text-emerald-600 transition-colors duration-200"
+              className="lg:hidden p-2 text-gray-700 hover:text-emerald-600 transition-colors duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
+                {isMenuOpen ? (
+                  <>
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                  </>
+                ) : (
+                  <>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                  </>
+                )}
               </svg>
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-white border-t border-gray-200">
+            <div className="px-4 py-4">
+              <nav className="space-y-4">
+                {navItems.map((item) => (
+                  <Link 
+                    key={item.href}
+                    href={item.href} 
+                    className={`block text-base text-gray-700 hover:text-emerald-600 transition-colors py-2 ${item.bold ? 'font-semibold' : 'font-medium'}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+              <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
+                <button className="w-full px-4 py-3 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-300 uppercase tracking-wide btn-animated-border">
+                  Sign In
+                </button>
+                <button className="w-full px-4 py-3 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-800 uppercase tracking-wide btn-animated-border">
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Search Bar */}
         {isSearchOpen && (
