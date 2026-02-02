@@ -87,175 +87,210 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 via-white to-emerald-100 relative overflow-hidden min-h-[85vh] flex items-center">
-        {/* Background Pattern */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-40 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-        </div>
+      {/* Modern Hero Section */}
+      <section className="relative bg-white overflow-hidden">
+        {/* Subtle Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-30"></div>
         
-        {/* Floating Elements */}
-        <div className="absolute top-10 right-10 w-16 h-16 bg-emerald-500 bg-opacity-10 rounded-full animate-float"></div>
-        <div className="absolute bottom-20 left-10 w-12 h-12 bg-blue-500 bg-opacity-10 rounded-full animate-float-delayed"></div>
-        <div className="absolute top-1/3 left-1/4 w-8 h-8 bg-purple-500 bg-opacity-10 rounded-full animate-bounce"></div>
+        {/* Gradient Orbs */}
+        <div className="absolute top-20 left-1/4 w-72 h-72 bg-gradient-to-r from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/15 to-purple-400/15 rounded-full blur-3xl"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="relative max-w-7xl mx-auto px-6 py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center min-h-[80vh]">
+            
             {/* Left Content */}
-            <div className="text-left space-y-8">
-              <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 text-sm font-medium">
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
+            <div className="space-y-10">
+              {/* Trust Badge */}
+              <div className="inline-flex items-center gap-3 bg-emerald-50 border border-emerald-200 px-4 py-2 text-sm font-medium text-emerald-700">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                 Trusted by 500,000+ Users
               </div>
-              
-              <div className="space-y-4">
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  <span className="text-gray-900">Smart Financial</span>
+
+              {/* Main Heading */}
+              <div className="space-y-6">
+                <h1 className="text-6xl lg:text-8xl font-black leading-[0.9] tracking-tight">
+                  <span className="text-gray-900">Smart</span>
                   <br />
-                  <span className="text-emerald-600 relative inline-block">
-                    Decisions Made
-                    <div className="absolute -bottom-2 left-0 w-full h-1 bg-emerald-400 transform scale-x-0 animate-expand-width"></div>
+                  <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                    Financial
                   </span>
                   <br />
-                  <span className="text-gray-700">Simple</span>
+                  <span className="text-gray-900">Decisions</span>
                 </h1>
+                <p className="text-2xl text-gray-600 font-light max-w-lg leading-relaxed">
+                  Compare financial products, get expert advice, and make smarter money decisions.
+                </p>
               </div>
-              
-              <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                Compare the best financial products, get expert advice, and save money with our comprehensive platform trusted by millions.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group bg-emerald-600 text-white px-8 py-4 font-semibold hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 relative overflow-hidden">
-                  <span className="relative z-10">Get Started Free</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-emerald-800 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-                </button>
-                <button className="group border-2 border-emerald-600 text-emerald-600 px-8 py-4 font-semibold hover:bg-emerald-600 hover:text-white transition-all duration-300 relative overflow-hidden">
-                  <span className="relative z-10">Watch Demo</span>
-                  <div className="absolute inset-0 bg-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-                </button>
-              </div>
-              
-              {/* Trust Indicators */}
-              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                  </svg>
-                  <span>100% Free</span>
+
+              {/* CTA Section */}
+              <div className="space-y-6">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="group relative px-8 py-4 bg-gray-900 text-white font-semibold overflow-hidden transition-all duration-300 hover:scale-105">
+                    <span className="relative z-10">Get Started</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                  </button>
+                  <button className="px-8 py-4 border border-gray-300 text-gray-700 font-semibold hover:border-gray-900 transition-colors duration-200">
+                    View Demo
+                  </button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd"/>
-                  </svg>
-                  <span>Bank-Level Security</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <span>4.8/5 Rating</span>
+                
+                {/* Stats */}
+                <div className="flex items-center gap-8 text-sm">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                    <span className="text-gray-600">100% Free</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span className="text-gray-600">Bank-Level Security</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-600">4.9★ Rating</span>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            {/* Right Content - Enhanced Financial Dashboard */}
+
+            {/* Right Content - Modern Dashboard */}
             <div className="relative">
-              {/* Main Dashboard Container */}
-              <div className="relative z-10 bg-white rounded-3xl shadow-2xl p-8 border border-gray-100 transform hover:scale-105 transition-transform duration-500">
-                {/* Header with Logo */}
+              {/* Main Dashboard */}
+              <div className="relative bg-white border border-gray-200 shadow-2xl shadow-gray-900/10 p-8">
+                {/* Header */}
                 <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                        <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9z"/>
                       </svg>
                     </div>
                     <div>
-                      <div className="font-bold text-gray-900">WealtoWallet</div>
-                      <div className="text-sm text-gray-500">Premium Account</div>
+                      <h3 className="text-lg font-bold text-gray-900">WealtoWallet</h3>
+                      <p className="text-sm text-gray-500">Premium Dashboard</p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-gray-900">$12,847</div>
-                    <div className="text-sm text-emerald-600 font-medium">+12.5% this month</div>
+                    <div className="text-3xl font-black text-gray-900">$24,847</div>
+                    <div className="text-sm text-emerald-600 font-semibold">↗ +18.2%</div>
                   </div>
                 </div>
-                
-                {/* Credit Score Section */}
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-3">
+
+                {/* Credit Score */}
+                <div className="mb-8">
+                  <div className="flex items-end justify-between mb-4">
                     <span className="text-gray-600 font-medium">Credit Score</span>
-                    <span className="text-3xl font-bold text-gray-900">780</span>
+                    <span className="text-5xl font-black text-gray-900">780</span>
                   </div>
-                  <div className="w-full bg-gray-200 h-3 mb-2">
-                    <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 h-3 transition-all duration-1000" style={{width: '78%'}}></div>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-500">
-                    <span>Poor</span>
-                    <span className="text-emerald-600 font-semibold">Excellent (780)</span>
+                  <div className="relative">
+                    <div className="w-full h-3 bg-gray-100">
+                      <div className="h-3 bg-gradient-to-r from-emerald-500 to-emerald-600 transition-all duration-1000" style={{width: '78%'}}></div>
+                    </div>
+                    <div className="absolute -top-8 right-0 text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1">
+                      EXCELLENT
+                    </div>
                   </div>
                 </div>
-                
-                {/* Financial Metrics */}
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center p-3 bg-blue-50 border border-blue-100">
-                    <span className="text-gray-700 font-medium">Savings Rate</span>
-                    <span className="font-bold text-blue-600 text-lg">4.75% APY</span>
+
+                {/* Metrics Grid */}
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <div className="text-sm text-gray-500 font-medium">Savings APY</div>
+                    <div className="text-2xl font-black text-blue-600">4.75%</div>
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-purple-50 border border-purple-100">
-                    <span className="text-gray-700 font-medium">Portfolio Return</span>
-                    <span className="font-bold text-purple-600 text-lg">+18.2%</span>
+                  <div className="space-y-2">
+                    <div className="text-sm text-gray-500 font-medium">Portfolio</div>
+                    <div className="text-2xl font-black text-purple-600">+18.2%</div>
                   </div>
                 </div>
               </div>
-              
-              {/* Floating Credit Card */}
-              <div className="absolute -top-6 -right-6 bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-2xl shadow-xl transform rotate-6 hover:rotate-3 transition-transform duration-500 z-20">
-                <div className="text-xs opacity-80 mb-1">Credit Card</div>
-                <div className="font-bold text-xl mb-1">2% Cash Back</div>
-                <div className="text-xs opacity-80">+1.25% this month</div>
-                <div className="absolute bottom-2 right-2 w-8 h-5 bg-white bg-opacity-20"></div>
+
+              {/* Floating Cards */}
+              <div className="absolute -top-6 -right-6 bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 shadow-xl">
+                <div className="text-xs font-medium opacity-80 mb-2">CREDIT CARD</div>
+                <div className="text-xl font-black mb-1">2% Cash Back</div>
+                <div className="text-xs opacity-80">+$127 this month</div>
+                <div className="absolute top-4 right-4 w-8 h-5 bg-white/20"></div>
               </div>
-              
-              {/* Floating Investment Card */}
-              <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-purple-600 to-purple-700 text-white p-6 rounded-2xl shadow-xl transform -rotate-6 hover:-rotate-3 transition-transform duration-500 z-20">
-                <div className="text-xs opacity-80 mb-1">Investment</div>
-                <div className="font-bold text-xl mb-1">+$347 Today</div>
+
+              <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-purple-600 to-purple-700 text-white p-6 shadow-xl">
+                <div className="text-xs font-medium opacity-80 mb-2">INVESTMENT</div>
+                <div className="text-xl font-black mb-1">+$347</div>
                 <div className="flex items-center gap-1 text-xs">
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd"/>
                   </svg>
-                  <span>+12.3%</span>
+                  <span>Today</span>
                 </div>
               </div>
 
-              {/* Floating App Icons */}
-              <div className="absolute top-1/2 -right-12 space-y-3 z-10">
-                <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                  <div className="w-5 h-5 bg-red-500"></div>
-                </div>
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                  <div className="w-5 h-5 bg-green-500"></div>
-                </div>
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                  <div className="w-5 h-5 bg-blue-500"></div>
-                </div>
-                <div className="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                  <div className="w-5 h-5 bg-yellow-500"></div>
-                </div>
-                <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                  <div className="w-5 h-5 bg-purple-500"></div>
-                </div>
+              {/* Floating Indicators */}
+              <div className="absolute top-1/2 -right-8 space-y-4">
+                <div className="w-3 h-3 bg-red-500 rounded-full shadow-lg"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full shadow-lg"></div>
+                <div className="w-3 h-3 bg-blue-500 rounded-full shadow-lg"></div>
+                <div className="w-3 h-3 bg-yellow-500 rounded-full shadow-lg"></div>
+                <div className="w-3 h-3 bg-purple-500 rounded-full shadow-lg"></div>
               </div>
-              
-              {/* Background Glow Effects */}
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-500 rounded-3xl blur-3xl opacity-20 transform scale-110 animate-pulse"></div>
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl blur-2xl opacity-10 transform scale-125"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Modern Comparison Section */}
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-gray-900 mb-4">
+              Want to view more options? Easily compare top picks side-by-side
+            </h2>
+            <p className="text-xl text-gray-600 font-light">
+              What product or service are you looking for?
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {categories.slice(0, 8).map((category, index) => (
+              <button
+                key={category.id}
+                onClick={() => window.location.href = category.href}
+                className={`group relative p-8 bg-white border border-gray-200 hover:border-emerald-500 transition-all duration-300 hover:shadow-xl ${
+                  index === 2 ? 'border-emerald-500 shadow-lg' : ''
+                }`}
+              >
+                <div className="text-center space-y-4">
+                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                    {category.icon}
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-sm font-black text-gray-900 uppercase tracking-wide">
+                      {category.title}
+                    </div>
+                    <div className="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {category.description}
+                    </div>
+                  </div>
+                </div>
+                {index === 2 && (
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-emerald-500 rounded-full"></div>
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Stats Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-8 text-center">
+              <div className="text-4xl font-black mb-2">500K+</div>
+              <div className="text-sm font-medium opacity-90">Happy Customers</div>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 text-center">
+              <div className="text-4xl font-black mb-2">$2.5B+</div>
+              <div className="text-sm font-medium opacity-90">Money Saved</div>
+            </div>
+            <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-8 text-center">
+              <div className="text-4xl font-black mb-2">4.9★</div>
+              <div className="text-sm font-medium opacity-90">Average Rating</div>
             </div>
           </div>
         </div>
