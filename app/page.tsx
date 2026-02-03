@@ -237,6 +237,125 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Logo Slider Section */}
+      <section className="py-16 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              Trusted by millions and partnered with top financial institutions
+            </h2>
+            <p className="text-gray-600">
+              Compare products from the most trusted names in finance
+            </p>
+          </div>
+
+          {/* Logo Slider Container */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll space-x-12 items-center">
+              {/* Credit Card Companies */}
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-600">CHASE</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-red-600">CAPITAL ONE</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-800">AMEX</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-700">CITI</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-purple-600">DISCOVER</div>
+              </div>
+
+              {/* Banks */}
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-red-700">WELLS FARGO</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-900">BANK OF AMERICA</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-green-700">TD BANK</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-orange-600">ALLY</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-600">MARCUS</div>
+              </div>
+
+              {/* Financial Services */}
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-green-600">FIDELITY</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-800">SCHWAB</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-orange-700">E*TRADE</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-purple-700">VANGUARD</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-teal-600">ROBINHOOD</div>
+              </div>
+
+              {/* Duplicate for seamless loop */}
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-600">CHASE</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-red-600">CAPITAL ONE</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-800">AMEX</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-700">CITI</div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-purple-600">DISCOVER</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Categories */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="w-16 h-16 bg-blue-100 mx-auto mb-4 flex items-center justify-center">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="2" y1="9" x2="22" y2="9"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Credit Cards</h3>
+              <p className="text-gray-600 text-sm">Compare rewards, rates, and benefits from top issuers</p>
+            </div>
+            <div>
+              <div className="w-16 h-16 bg-green-100 mx-auto mb-4 flex items-center justify-center">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Banking</h3>
+              <p className="text-gray-600 text-sm">Find the best savings and checking accounts</p>
+            </div>
+            <div>
+              <div className="w-16 h-16 bg-purple-100 mx-auto mb-4 flex items-center justify-center">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Investing</h3>
+              <p className="text-gray-600 text-sm">Compare brokers and investment platforms</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Modern Comparison Section */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-6">

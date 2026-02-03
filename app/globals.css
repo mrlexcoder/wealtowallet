@@ -184,3 +184,17 @@ a, button, [role="button"], .cursor-pointer {
   animation: expand-width 2s ease-out forwards;
   animation-delay: 1s;
 }
+
+/* Logo Slider Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
