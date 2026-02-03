@@ -482,6 +482,229 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Products Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-gray-900 mb-4">
+              Featured Best Picks
+            </h2>
+            <p className="text-xl text-gray-600 font-light">
+              Top-rated products across all categories, handpicked by our experts
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Credit Cards Featured */}
+            <div className="group bg-white border border-gray-200 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <rect x="2" y="4" width="16" height="12" rx="2" ry="2"/>
+                    <line x1="2" y1="8" x2="18" y2="8"/>
+                  </svg>
+                </div>
+                <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1">EDITOR'S CHOICE</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Chase Sapphire Preferred</h3>
+              <p className="text-gray-600 mb-4">Best overall travel rewards credit card with 2X points on travel and dining</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Annual Fee</span>
+                  <span className="font-semibold">$95</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Bonus</span>
+                  <span className="font-semibold text-emerald-600">80,000 points</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">APR</span>
+                  <span className="font-semibold">21.49% - 28.49%</span>
+                </div>
+              </div>
+              <button className="w-full py-3 bg-gray-900 text-white font-semibold hover:bg-emerald-600 transition-colors duration-200">
+                View Details
+              </button>
+            </div>
+
+            {/* Banking Featured */}
+            <div className="group bg-white border border-gray-200 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9z"/>
+                  </svg>
+                </div>
+                <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1">HIGHEST APY</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Marcus High-Yield Savings</h3>
+              <p className="text-gray-600 mb-4">Top-rated online savings account with competitive rates and no fees</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">APY</span>
+                  <span className="font-semibold text-emerald-600">4.75%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Minimum Balance</span>
+                  <span className="font-semibold">$0</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Monthly Fee</span>
+                  <span className="font-semibold">$0</span>
+                </div>
+              </div>
+              <button className="w-full py-3 bg-gray-900 text-white font-semibold hover:bg-emerald-600 transition-colors duration-200">
+                Open Account
+              </button>
+            </div>
+
+            {/* Home/Mortgage Featured */}
+            <div className="group bg-white border border-gray-200 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                  </svg>
+                </div>
+                <span className="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-1">BEST RATES</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Rocket Mortgage</h3>
+              <p className="text-gray-600 mb-4">Fast online mortgage process with competitive rates and excellent service</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">30-Year Fixed</span>
+                  <span className="font-semibold text-emerald-600">6.875%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">15-Year Fixed</span>
+                  <span className="font-semibold">6.125%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Closing Time</span>
+                  <span className="font-semibold">30 days</span>
+                </div>
+              </div>
+              <button className="w-full py-3 bg-gray-900 text-white font-semibold hover:bg-emerald-600 transition-colors duration-200">
+                Get Quote
+              </button>
+            </div>
+
+            {/* Personal Loans Featured */}
+            <div className="group bg-white border border-gray-200 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zM14 6a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2h6zM4 14a2 2 0 002 2h8a2 2 0 002-2v-4a2 2 0 00-2-2H6a2 2 0 00-2 2v4z"/>
+                  </svg>
+                </div>
+                <span className="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-1">FAST FUNDING</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">SoFi Personal Loans</h3>
+              <p className="text-gray-600 mb-4">No fees personal loans with competitive rates and flexible terms</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">APR Range</span>
+                  <span className="font-semibold text-emerald-600">8.99% - 29.99%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Loan Amount</span>
+                  <span className="font-semibold">$5K - $100K</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Origination Fee</span>
+                  <span className="font-semibold">$0</span>
+                </div>
+              </div>
+              <button className="w-full py-3 bg-gray-900 text-white font-semibold hover:bg-emerald-600 transition-colors duration-200">
+                Check Rates
+              </button>
+            </div>
+
+            {/* Insurance Featured */}
+            <div className="group bg-white border border-gray-200 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-white">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <span className="text-xs font-bold text-red-600 bg-red-50 px-2 py-1">BEST VALUE</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">GEICO Auto Insurance</h3>
+              <p className="text-gray-600 mb-4">Affordable auto insurance with excellent customer service and discounts</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Avg. Annual Cost</span>
+                  <span className="font-semibold text-emerald-600">$1,348</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Discounts</span>
+                  <span className="font-semibold">Up to 25%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Customer Rating</span>
+                  <span className="font-semibold">4.2/5</span>
+                </div>
+              </div>
+              <button className="w-full py-3 bg-gray-900 text-white font-semibold hover:bg-emerald-600 transition-colors duration-200">
+                Get Quote
+              </button>
+            </div>
+
+            {/* Investing Featured */}
+            <div className="group bg-white border border-gray-200 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center text-white">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                  </svg>
+                </div>
+                <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1">TOP RATED</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Fidelity Brokerage</h3>
+              <p className="text-gray-600 mb-4">Commission-free trading with excellent research tools and customer service</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Stock Trades</span>
+                  <span className="font-semibold text-emerald-600">$0</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Account Minimum</span>
+                  <span className="font-semibold">$0</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Mutual Funds</span>
+                  <span className="font-semibold">3,000+</span>
+                </div>
+              </div>
+              <button className="w-full py-3 bg-gray-900 text-white font-semibold hover:bg-emerald-600 transition-colors duration-200">
+                Open Account
+              </button>
+            </div>
+          </div>
+
+          {/* View All Categories CTA */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 p-8 inline-block">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Explore All Categories
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl">
+                Compare hundreds of financial products across all categories to find the perfect match for your needs
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="px-6 py-3 bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors duration-200">
+                  View All Products
+                </button>
+                <button className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold hover:border-gray-900 transition-colors duration-200">
+                  Get Personalized Recommendations
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
