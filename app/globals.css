@@ -198,3 +198,24 @@ a, button, [role="button"], .cursor-pointer {
 .animate-scroll {
   animation: scroll 30s linear infinite;
 }
+
+/* Professional animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Enhanced expand width animation */
+.animate-expand-width {
+  animation: expand-width 3s ease-out forwards;
+  animation-delay: 1.5s;
+  transform-origin: left;
+}
